@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisbah Intelligence Operations Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- This page is designed as an interactive guide for Hisbah intelligence officers. It is divided into 6 sections to quickly provide information on mobile. The new LLM section assists in drafting high-quality reports. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -2px rgba(0, 0, 0, 0.05);
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab-btn.active {
+            border-bottom-color: #4f46e5;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+        .checklist-item.checked .checklist-icon {
+            background-color: #16a34a;
+            border-color: #16a34a;
+        }
+        .checklist-item.checked .checklist-icon svg {
+            display: block;
+        }
+        .checklist-item {
+             background-color: #f7fee7; /* Light Green */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto max-w-5xl p-4 sm:p-6 md:p-8">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-2">Main Operations Guide</h1>
+            <p class="text-lg text-indigo-700 font-semibold">Sokoto State Hisbah Board - Intelligence Unit</p>
+        </header>
+
+        <p class="text-center bg-white border-l-4 border-indigo-500 p-4 rounded-r-lg shadow-sm mb-10 text-slate-600">
+            This page is designed to be a user-friendly guide for Hisbah intelligence officers. Click any section below for detailed information.
+        </p>
+
+        <!-- Navigation Bar: Section 5 (Report Assistant) is the new LLM feature. -->
+        <nav id="main-nav" class="grid grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+            <div data-target="manufa" class="section-card bg-white p-4 rounded-xl shadow-md border-t-4 border-indigo-500 cursor-pointer text-center">
+                <span class="text-4xl">🎯</span>
+                <h2 class="text-lg font-bold mt-2">Mission Mandate</h2>
+            </div>
+            <div data-target="siffofi" class="section-card bg-white p-4 rounded-xl shadow-md border-t-4 border-blue-500 cursor-pointer text-center">
+                <span class="text-4xl">👤</span>
+                <h2 class="text-lg font-bold mt-2">Personnel Qualities</h2>
+            </div>
+            <div data-target="kayan-aiki" class="section-card bg-white p-4 rounded-xl shadow-md border-t-4 border-green-500 cursor-pointer text-center">
+                <span class="text-4xl">🛠️</span>
+                <h2 class="text-lg font-bold mt-2">Essential Tools</h2>
+            </div>
+            <div data-target="hanyoyi" class="section-card bg-white p-4 rounded-xl shadow-md border-t-4 border-red-500 cursor-pointer text-center">
+                <span class="text-4xl">🚶‍♂️</span>
+                <h2 class="text-lg font-bold mt-2">Operational Procedures</h2>
+            </div>
+            <div data-target="llm-assistant" class="section-card bg-white p-4 rounded-xl shadow-md border-t-4 border-purple-500 cursor-pointer text-center">
+                <span class="text-4xl">✨</span>
+                <h2 class="text-lg font-bold mt-2">Report Assistant</h2>
+            </div>
+            <div data-target="tsaro" class="section-card bg-white p-4 rounded-xl shadow-md border-t-4 border-yellow-500 cursor-pointer text-center">
+                <span class="text-4xl">🛡️</span>
+                <h2 class="text-lg font-bold mt-2">Security Rules</h2>
+            </div>
+        </nav>
+
+        <main id="content-container">
+            <!-- 1. Mission Mandate -->
+            <section id="manufa" class="content-section bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-indigo-800 mb-4">1. Mission and Mandate</h3>
+                <p class="mb-4 text-slate-600">The primary mandate of the Hisbah Intelligence section is to **gather intelligence** concerning Sharia law violations and criminal activities within the state.</p>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 border-b pb-1 border-indigo-100">Key Focus Areas:</h4>
+                        <ul class="list-disc list-inside mt-2 text-slate-600 space-y-1">
+                            <li>Illicit drug consumption and concealed sale.</li>
+                            <li>Gatherings for fornication and hidden immorality sites (Brothels).</li>
+                            <li>Gambling dens and other forms of financial transgressions.</li>
+                            <li>Gathering information on false reports (Fake news) that may incite public unrest.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-slate-800 border-b pb-1 border-indigo-100">Special Responsibilities:</h4>
+                        <ul class="list-disc list-inside mt-2 text-slate-600 space-y-1">
+                            <li>Operating covertly, without public knowledge of your Hisbah affiliation.</li>
+                            <li>Submitting a complete report with evidence before taking action.</li>
+                            <li>Protecting lives and property while gathering intelligence.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Personnel Qualities -->
+            <section id="siffofi" class="content-section bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4">2. Personnel Qualities</h3>
+                <p class="text-slate-600 mb-6">The Hisbah Intelligence Officer must possess the following qualities:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                        <h4 class="font-bold text-blue-900">Trustworthiness and Secrecy</h4>
+                        <p class="text-sm text-slate-600 mt-1">This is the highest quality. The officer must protect all secret information obtained, and never disclose it to unauthorized persons.</p>
+                    </div>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                        <h4 class="font-bold text-blue-900">Observation and Attention</h4>
+                        <p class="text-sm text-slate-600 mt-1">The ability to notice small details, environmental changes, and public happenings without drawing attention to oneself.</p>
+                    </div>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                        <h4 class="font-bold text-blue-900">Local Knowledge</h4>
+                        <p class="text-sm text-slate-600 mt-1">Knowing the streets, neighborhoods, local customs, and how the residents conduct their affairs.</p>
+                    </div>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                        <h4 class="font-bold text-blue-900">Prudent Courage</h4>
+                        <p class="text-sm text-slate-600 mt-1">Being courageous enough to enter danger, but using wisdom to avoid confrontation or exposing yourself.</p>
+                    </div>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm md:col-span-2">
+                        <h4 class="font-bold text-blue-900">Communication Skills</h4>
+                        <p class="text-sm text-slate-600 mt-1">Knowing how to speak with the public, extract information from people, and report clearly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Essential Tools -->
+            <section id="kayan-aiki" class="content-section bg-white p-6 rounded-xl shadow-lg">
+                 <h3 class="text-2xl font-bold text-green-800 mb-4">3. Essential Tools and Equipment</h3>
+                 <p class="text-slate-600 mb-6">These are the necessary tools for conducting covert operations. Click each one to confirm you have prepared it.</p>
+                 <div id="checklist-container" class="space-y-3">
+                    <div class="checklist-item flex items-center p-3 rounded-xl shadow-sm border border-green-200 cursor-pointer">
+                        <div class="checklist-icon h-6 w-6 rounded-full border-2 border-slate-300 mr-4 flex items-center justify-center flex-shrink-0">
+                            <svg class="h-4 w-4 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">1. Quality Mobile Phone (with GPS)</h4>
+                            <p class="text-sm text-slate-600">With a good camera, strong Password, and Encrypted Messaging Apps for communication.</p>
+                        </div>
+                    </div>
+                     <div class="checklist-item flex items-center p-3 rounded-xl shadow-sm border border-green-200 cursor-pointer">
+                        <div class="checklist-icon h-6 w-6 rounded-full border-2 border-slate-300 mr-4 flex items-center justify-center flex-shrink-0">
+                            <svg class="h-4 w-4 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">2. Writing Materials and Diary</h4>
+                            <p class="text-sm text-slate-600">A small notebook for writing down observed data. Never write your name inside.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item flex items-center p-3 rounded-xl shadow-sm border border-green-200 cursor-pointer">
+                        <div class="checklist-icon h-6 w-6 rounded-full border-2 border-slate-300 mr-4 flex items-center justify-center flex-shrink-0">
+                            <svg class="h-4 w-4 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">3. Work Clothes (Casual/Disguise)</h4>
+                            <p class="text-sm text-slate-600">Wear clothing that makes you blend in as an ordinary citizen without drawing attention.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item flex items-center p-3 rounded-xl shadow-sm border border-green-200 cursor-pointer">
+                        <div class="checklist-icon h-6 w-6 rounded-full border-2 border-slate-300 mr-4 flex items-center justify-center flex-shrink-0">
+                            <svg class="h-4 w-4 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">4. Cover Identification (Cover ID)</h4>
+                            <p class="text-sm text-slate-600">If issued, it must be protected carefully at all times.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item flex items-center p-3 rounded-xl shadow-sm border border-green-200 cursor-pointer">
+                        <div class="checklist-icon h-6 w-6 rounded-full border-2 border-slate-300 mr-4 flex items-center justify-center flex-shrink-0">
+                            <svg class="h-4 w-4 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-800">5. Powerful Battery (Power Bank)</h4>
+                            <p class="text-sm text-slate-600">To ensure your phone does not run out of battery during intelligence gathering.</p>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+
+            <!-- 4. Operational Procedures -->
+            <section id="hanyoyi" class="content-section bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-red-800 mb-4">4. Operational Procedures</h3>
+                 <p class="text-slate-600 mb-6">This section divides operational steps into two: Field data collection, and how to use the App to send reports.</p>
+                <div class="border-b border-slate-200 mb-6">
+                    <nav class="-mb-px flex space-x-6" id="tabs-container">
+                        <button data-tab="tattarawa" class="tab-btn py-4 px-1 border-b-2 border-transparent text-slate-500 hover:text-indigo-600 hover:border-indigo-300 focus:outline-none active">
+                            A. Data Collection
+                        </button>
+                        <button data-tab="app" class="tab-btn py-4 px-1 border-b-2 border-transparent text-slate-500 hover:text-indigo-600 hover:border-indigo-300 focus:outline-none">
+                            B. Using the App
+                        </button>
+                    </nav>
+                </div>
+
+                <div id="tattarawa" class="tab-content">
+                     <h4 class="text-xl font-semibold text-slate-800 mb-3">Information Gathering Process</h4>
+                     <div class="space-y-4 text-slate-600">
+                        <p class="bg-gray-50 p-3 rounded-lg"><strong class="text-slate-900">Passive Surveillance:</strong> Remain near the suspected location, but do not show that you are observing. Act or sit like any ordinary citizen.</p>
+                        <div class="p-3 border-l-4 border-indigo-400 bg-indigo-50 rounded-r-lg">
+                            <p><strong class="text-indigo-900 font-bold">Triple Verification:</strong></p>
+                            <ol class="list-decimal list-inside ml-4 mt-2 space-y-1 text-slate-700">
+                                <li><strong>Report:</strong> Obtaining a report from a source.</li>
+                                <li><strong>Observation:</strong> Going and seeing it yourself.</li>
+                                <li><strong>Evidence:</strong> Gathering evidence (photo or video) for confirmation.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-red-100 border-l-4 border-red-500 text-red-800 p-4 rounded-r-lg font-bold">
+                            <h5 class="font-bold">Crucial Rule: 'Do Not Enter a Difficult Situation'</h5>
+                            <p class="mt-1">If you realize you might be identified or your life is in danger, **Withdraw Immediately**. Officer safety is more important than intelligence gathering during an emergency.</p>
+                        </div>
+                     </div>
+                </div>
+
+                <div id="app" class="tab-content hidden">
+                    <h4 class="text-xl font-semibold text-slate-800 mb-3">How to Send a Report in the App (The Secure Reporting System)</h4>
+                    <p class="text-slate-600 mb-4">Follow these five (5) steps to send a confidential report.</p>
+                    <div id="app-steps-container" class="relative p-4 border-2 border-red-200 rounded-xl bg-slate-50 min-h-[200px] flex items-center justify-center shadow-inner">
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5. Report Drafting Assistant (LLM SECTION) -->
+            <section id="llm-assistant" class="content-section bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-purple-800 mb-4">5. Report Drafting Assistant ✨ (LLM Report Assistant)</h3>
+                <p class="text-slate-600 mb-6">This is a modern tool that will assist you in **drafting a formal intelligence report** from your raw field notes. Use it to ensure your report is clean and in the required Hisbah language (Hausa).</p>
+
+                <div class="mb-6">
+                    <label for="field-notes" class="block text-sm font-medium text-slate-700 mb-2">Enter Your Raw Field Notes (in Hausa):</label>
+                    <textarea id="field-notes" rows="6" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 bg-slate-50" placeholder="Example (in Hausa): Na gani a daren jiya, misalin karfe 1:00 na dare, akwai mutane 5 a cikin gidan da muka sani. Suna shan wani abu mai launin ruwan kasa. Sun yi hayaniya sosai. Wurin Gobirawa ne, kusa da bakin kogi."></textarea>
+                </div>
+
+                <div class="flex justify-center mb-6">
+                    <button id="generate-report-btn" class="flex items-center space-x-2 bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition disabled:opacity-50" disabled>
+                        <span>Generate Intelligence Report</span>
+                        <span class="text-xl">✨</span>
+                    </button>
+                </div>
+
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-purple-800 border-b pb-2 mb-4">Generated Report Draft (from LLM):</h4>
+                    <div id="report-output" class="min-h-[100px] p-4 bg-purple-50 border border-purple-200 rounded-lg text-slate-700 whitespace-pre-wrap flex items-center justify-center">
+                        <p class="text-slate-500 italic">Click **Generate Intelligence Report ✨** to see the result.</p>
+                    </div>
+                    <div id="loading-indicator" class="hidden text-center mt-4 text-purple-600">
+                        <svg class="animate-spin h-5 w-5 mr-3 inline text-purple-600" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        Drafting... Please wait a moment.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Security and Protection Rules -->
+            <section id="tsaro" class="content-section bg-white p-6 rounded-xl shadow-lg">
+                 <h3 class="text-2xl font-bold text-yellow-800 mb-4">6. Security and Protection Rules</h3>
+                 <p class="text-slate-600 mb-6">Your work requires dedication, but most importantly, **secrecy**. Observe these rules.</p>
+                 <div class="space-y-4">
+                     <div class="flex items-start bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                         <span class="text-yellow-600 mr-3 mt-1 font-bold text-xl">⚠️</span>
+                         <div>
+                             <h4 class="font-semibold text-slate-800">Secure Communications</h4>
+                             <p class="text-slate-600">Never use regular phone lines to discuss confidential information. Use only approved secure methods.</p>
+                         </div>
+                     </div>
+                      <div class="flex items-start bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                         <span class="text-yellow-600 mr-3 mt-1 font-bold text-xl">⚠️</span>
+                         <div>
+                             <h4 class="font-semibold text-slate-800">Phone Security</h4>
+                             <p class="text-slate-600">Never leave the confidential phone unattended. It must always have a strong Password.</p>
+                         </div>
+                     </div>
+                     <div class="flex items-start bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                         <span class="text-green-600 mr-3 mt-1 font-bold text-xl">✅</span>
+                         <div>
+                             <h4 class="font-semibold text-slate-800">Information Verification</h4>
+                             <p class="text-slate-600">Before taking any steps to apprehend suspects, it must be confirmed that sufficient strong evidence is obtained to support the Report.</p>
+                         </div>
+                     </div>
+                     <div class="flex items-start bg-yellow-50 p-3 rounded-lg border-l-4 border-red-500">
+                         <span class="text-red-600 mr-3 mt-1 font-bold text-xl">🚨</span>
+                         <div>
+                             <h4 class="font-semibold text-slate-800">Physical Safety</h4>
+                             <p class="text-slate-600">If the officer feels identified or is facing threats, they must immediately notify the Senior Intelligence Officer (Admin).</p>
+                         </div>
+                     </div>
+                 </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all interactive elements
+            const navCards = document.querySelectorAll('#main-nav .section-card');
+            const contentSections = document.querySelectorAll('#content-container .content-section');
+            const tabs = document.querySelectorAll('#tabs-container .tab-btn');
+            const tabContents = document.querySelectorAll('#hanyoyi .tab-content');
+            const checklistItems = document.querySelectorAll('.checklist-item');
+            const appStepsContainer = document.getElementById('app-steps-container');
+            
+            // --- Gemini API Elements ---
+            const generateReportBtn = document.getElementById('generate-report-btn');
+            const fieldNotesInput = document.getElementById('field-notes');
+            const reportOutput = document.getElementById('report-output');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const apiKey = ""; // API key is provided at runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            // Model logic for Step-by-Step App Guide (Section 4, Tab B)
+            const appSteps = [
+                {
+                    title: "Step 1: Access Dashboard",
+                    description: "The officer will access the red **Intelligence Dashboard** section within the app.",
+                },
+                {
+                    title: "Step 2: Complete Report Title",
+                    description: "Write a concise title that describes the report's content (Example: *G.G.S. School Youth Drug Use*).",
+                },
+                {
+                    title: "Step 3: Specify Location",
+                    description: "It is mandatory to clearly specify the location of the problem (Example: *A Room at the End of Gobirawa Street*).",
+                },
+                {
+                    title: "Step 4: Detailed Information (Confidential)",
+                    description: "Write a complete description, including the time the problem occurs, the number of people involved, and any leader running the activity (if applicable).",
+                },
+                {
+                    title: "Step 5: Submission (Database Entry)",
+                    description: "Submit the report. This report will enter the Database as **Unit: Intelligence** and only the **Admin** will view it.",
+                },
+                {
+                    title: "Complete",
+                    description: "Your report has been successfully sent. You can now return to the beginning to review the steps.",
+                }
+            ];
+
+            let currentAppStep = 0;
+
+            // Navigation functions
+            function showSection(targetId) {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    }
+                });
+            }
+
+            navCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.getAttribute('data-target');
+                    showSection(targetId);
+                });
+            });
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    const targetTabId = tab.getAttribute('data-tab');
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                        if (content.id === targetTabId) {
+                            content.classList.remove('hidden');
+                        }
+                    });
+                });
+            });
+
+            checklistItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('checked');
+                });
+            });
+
+            function renderAppStep(stepIndex) {
+                if (stepIndex >= appSteps.length) return;
+                
+                const step = appSteps[stepIndex];
+                let buttonsHtml;
+
+                if (stepIndex < appSteps.length - 1) {
+                    buttonsHtml = `<button id="next-step-btn" class="mt-4 bg-red-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-red-700 transition">Next Step &rarr;</button>`;
+                } else {
+                     buttonsHtml = `<button id="reset-steps-btn" class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-green-700 transition">Restart</button>`;
+                }
+
+                appStepsContainer.innerHTML = `
+                    <div class="text-center p-4">
+                        <span class="text-5xl font-extrabold text-red-500 block mb-2">${stepIndex + 1}</span>
+                        <h5 class="text-xl font-bold text-slate-900">${step.title}</h5>
+                        <p class="mt-2 text-slate-600 max-w-sm mx-auto">${step.description}</p>
+                        ${buttonsHtml}
+                    </div>
+                `;
+
+                const nextBtn = document.getElementById('next-step-btn');
+                if(nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        currentAppStep++;
+                        renderAppStep(currentAppStep);
+                    });
+                }
+                
+                const resetBtn = document.getElementById('reset-steps-btn');
+                if(resetBtn) {
+                    resetBtn.addEventListener('click', () => {
+                        currentAppStep = 0;
+                        renderAppStep(currentAppStep);
+                    });
+                }
+            }
+            
+            // --- Gemini LLM Report Assistant Logic ---
+
+            // Enable button when there's text
+            fieldNotesInput.addEventListener('input', () => {
+                // Require at least 20 characters for a meaningful draft
+                generateReportBtn.disabled = fieldNotesInput.value.trim().length < 20;
+            });
+
+            generateReportBtn.addEventListener('click', () => {
+                const rawNotes = fieldNotesInput.value.trim();
+                if (rawNotes) {
+                    generateReportDraft(rawNotes);
+                }
+            });
+
+            async function generateReportDraft(rawNotes) {
+                reportOutput.innerHTML = '';
+                loadingIndicator.classList.remove('hidden');
+                generateReportBtn.disabled = true;
+
+                // System prompt in English guides the model to produce a formal report *in Hausa*.
+                const systemPrompt = "Act as a professional intelligence analyst for a Sharia law enforcement agency. The user provides raw field notes in Hausa. Convert these informal notes into a formal, structured intelligence report paragraph suitable for submission to a senior administrator. The report must be concise, factual, and strictly in Hausa, detailing the location, time, nature of the illicit activity (e.g., shaye-shaye, zina, caca), and the number of subjects observed. Do not add any introductory or concluding remarks (like 'Ga rahoton' or 'The report is ready').";
+                
+                const userQuery = `Raw Field Notes (in Hausa): ${rawNotes}`;
+
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                    // Google Search grounding is included 
+                    tools: [{ "google_search": {} }],
+                };
+
+                const maxRetries = 5;
+                let retryCount = 0;
+                let delay = 1000; // 1 second
+
+                while (retryCount < maxRetries) {
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (response.status === 429 || response.status >= 500) {
+                            // Exponential backoff
+                            if (retryCount < maxRetries - 1) {
+                                await new Promise(resolve => setTimeout(resolve, delay));
+                                delay *= 2;
+                                retryCount++;
+                                continue;
+                            }
+                        }
+
+                        const result = await response.json();
+                        // Extract text, falling back to an error message in English
+                        const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "Error in drafting report. Please check your text and try again.";
+                        
+                        reportOutput.innerHTML = `<p class="font-mono text-sm whitespace-pre-wrap">${text}</p>`;
+
+                        // Break loop on success
+                        break; 
+
+                    } catch (error) {
+                        reportOutput.innerHTML = `<p class="text-red-500">An error occurred (Network Error): Unable to connect to the server.</p>`;
+                        break;
+                    } finally {
+                        loadingIndicator.classList.add('hidden');
+                        // Re-enable button based on current input value
+                        generateReportBtn.disabled = fieldNotesInput.value.trim().length < 20; 
+                    }
+                }
+            }
+
+
+            // Initial load
+            showSection('manufa');
+            renderAppStep(currentAppStep);
+        });
+    </script>
+</body>
+</html>
